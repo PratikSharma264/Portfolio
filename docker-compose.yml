@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      # - RESEND_API_KEY=replace_me   # optional, enables real contact-form email
+    restart: unless-stopped
