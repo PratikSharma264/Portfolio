@@ -17,7 +17,7 @@ export const profile = {
   title: "Computer Science Student",
   roles: [
     "AI Engineer",
-    "Full-Stack Developer",
+    "Backend Developer",
     "Machine Learning Enthusiast",
     "Research Assistant",
   ],
@@ -33,10 +33,10 @@ export const profile = {
   resumeUrl: "#", // TODO: replace with a real PDF in /public/resume.pdf
   availability: "Open to internships & research collaborations",
   summary:
-    "I build retrieval-augmented and applied-ML systems, then ship them as real, usable software. Most of my time goes into the gap between a model that works in a notebook and a system that holds up in production — evaluation, failure analysis, and the full-stack plumbing around it.",
+    "I build retrieval-augmented and applied-ML systems, then ship them as real, usable software. Most of my time goes into the gap between a model that works in a notebook and a system that holds up in production — evaluation, failure analysis, and the backend plumbing around it.",
   bio: [
     "I'm a Computer Science undergraduate based in Nepal, focused on the applied side of AI: retrieval-augmented generation, NLP, and the infrastructure that makes machine learning systems trustworthy enough to actually deploy.",
-    "My coursework and side projects sit at the intersection of three things — large language models, the data engineering that feeds them, and the full-stack work needed to put them in front of real users. I'm equally comfortable profiling a Spark job and shipping a Next.js front end for it.",
+    "My coursework and side projects sit at the intersection of three things — large language models, the data engineering that feeds them, and the backend work needed to put them in front of real users. I'm equally comfortable profiling a Spark job and shipping a Next.js front end for it.",
     "Right now I'm most interested in why RAG pipelines fail silently — retrieval misses, stale context, hallucinated citations — and how to detect those failures before a user sees them, particularly in medical and other high-stakes domains.",
   ],
   goals:
@@ -101,19 +101,19 @@ export const skillCategories: SkillCategory[] = [
       { name: "Cassandra", level: 50 },
     ],
   },
-  {
-    id: "bigdata",
-    title: "Big Data",
-    blurb: "Pipelines at scale",
-    skills: [
-      { name: "Spark", level: 74 },
-      { name: "Hadoop", level: 70 },
-      { name: "Hive", level: 66 },
-      { name: "Sqoop", level: 58 },
-      { name: "Flume", level: 55 },
-      { name: "Pig", level: 52 },
-    ],
-  },
+  // {
+  //   id: "bigdata",
+  //   title: "Big Data",
+  //   blurb: "Pipelines at scale",
+  //   skills: [
+  //     { name: "Spark", level: 74 },
+  //     { name: "Hadoop", level: 70 },
+  //     { name: "Hive", level: 66 },
+  //     { name: "Sqoop", level: 58 },
+  //     { name: "Flume", level: 55 },
+  //     { name: "Pig", level: 52 },
+  //   ],
+  // },
   {
     id: "devops",
     title: "DevOps",
@@ -235,18 +235,16 @@ export const publications: Publication[] = [
 
 export const education: EducationEntry[] = [
   {
-    degree: "B.Sc. in Computer Science",
+    degree: "Bachelor in Computer Science",
     institution: "Khwopa Engineering College",
     location: "Nepal",
     start: "2020",
     end: "2024",
     coursework: [
-      "Data Mining",
       "Machine Learning",
       "Artificial Intelligence",
       "Computer Networks",
       "Database Systems",
-      "Big Data Analytics",
       "Computer Organization and Architecture",
     ],
   },
@@ -326,32 +324,20 @@ export const blogPosts: BlogPost[] = [
       "This is the core idea behind the clinical RAG failure classifier in my projects section: a small model whose only job is to label *why* an answer might be wrong, sitting alongside the main pipeline rather than inside it.",
     ],
   },
-  {
-    slug: "spark-on-a-real-cluster",
-    title: "What changes when Spark runs on an actual cluster",
-    excerpt:
-      "Jobs that finish fine on a laptop fall over the moment they hit real partitioning and resource limits. Notes from getting a Hadoop + Spark pipeline production-shaped.",
-    category: "Big Data",
-    tags: ["Spark", "Hadoop", "Big Data"],
-    date: "2026-01-09",
-    content: [
-      "Local-mode Spark hides almost every problem that matters in production: skewed partitions, shuffle cost, and memory pressure all behave differently once you're scheduling across real executors.",
-      "The single highest-leverage habit was checking the Spark UI's stage timeline before optimizing anything else — most of the slowdowns I assumed were 'big data is just slow' turned out to be one skewed partition dominating a stage.",
-    ],
-  },
-  {
-    slug: "full-stack-for-ml-engineers",
-    title: "The full-stack skills that actually help an ML project ship",
-    excerpt:
-      "A model in a notebook and a model in front of a user are different projects. Here's the non-ML work that closes that gap.",
-    category: "Machine Learning",
-    tags: ["Django", "Full-Stack", "ML"],
-    date: "2025-11-22",
-    content: [
-      "Most of the work between 'the model works' and 'the product works' is unglamorous: an API contract that won't change under you, a job queue for anything slower than a button click, and a UI that tells the user when the model is uncertain instead of presenting every answer with equal confidence.",
-      "Django on the backend and a typed frontend (Next.js + TypeScript) cover almost all of it — the ML-specific part is usually smaller than people expect.",
-    ],
-  },
+
+  // {
+  //   slug: "bull-stack-for-ml-engineers",
+  //   title: "The full-stack skills that actually help an ML project ship",
+  //   excerpt:
+  //     "A model in a notebook and a model in front of a user are different projects. Here's the non-ML work that closes that gap.",
+  //   category: "Machine Learning",
+  //   tags: ["Django", "Full-Stack", "ML"],
+  //   date: "2025-11-22",
+  //   content: [
+  //     "Most of the work between 'the model works' and 'the product works' is unglamorous: an API contract that won't change under you, a job queue for anything slower than a button click, and a UI that tells the user when the model is uncertain instead of presenting every answer with equal confidence.",
+  //     "Django on the backend and a typed frontend (Next.js + TypeScript) cover almost all of it — the ML-specific part is usually smaller than people expect.",
+  //   ],
+  // },
 ];
 
 export const blogCategories = Array.from(

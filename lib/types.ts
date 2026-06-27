@@ -15,7 +15,7 @@ export type Project = {
   title: string;
   tagline: string;
   description: string;
-  category: "ai" | "web" | "data";
+  category: "ai" | "web" ;
   status: "live" | "in-progress" | "research";
   features: string[];
   tech: string[];
