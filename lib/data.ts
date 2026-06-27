@@ -149,7 +149,7 @@ export const projects: Project[] = [
       "Most RAG evaluation only scores the final answer, which hides whether a wrong answer came from bad retrieval or bad generation. Building a labeled failure-mode dataset and a classifier that separates the two was the core technical problem.",
     impact:
       "Gives a concrete, inspectable reason when a clinical RAG answer should be trusted less — a step toward RAG systems that fail loudly instead of silently in high-stakes domains.",
-    github: "https://github.com/PratikSharma264",
+    github: "https://github.com/PratikSharma264/Clinical_Rag",
     accent: "amber",
   },
   {
@@ -171,30 +171,30 @@ export const projects: Project[] = [
       "Coordinating state across three different user roles (customer, restaurant, rider) in real time without the order pipeline getting out of sync was the main design challenge.",
     impact:
       "A complete, working reference for multi-sided marketplace architecture — the kind of system design question that shows up in full-stack interviews.",
-    github: "https://github.com/PratikSharma264",
+    github: "https://github.com/PratikSharma264/FoodDeliveryWebApp",
     accent: "glacier",
   },
-  {
-    slug: "bigdata-analytics-platform",
-    title: "Big Data Analytics Platform",
-    tagline: "Hadoop and Spark, end to end on a real dataset",
-    description:
-      "An analytics pipeline built on the Hadoop ecosystem with Spark for processing, taking raw data from ingestion through transformation to a visualized output layer.",
-    category: "data",
-    status: "in-progress",
-    features: [
-      "Hadoop ecosystem setup for distributed storage",
-      "Spark processing for transformation at scale",
-      "Data visualization layer on top of processed output",
-    ],
-    tech: ["Hadoop", "Spark", "Hive", "Python"],
-    challenges:
-      "Tuning Spark jobs against a Hadoop cluster's actual resource limits — rather than just getting a job to finish on a laptop — was the most useful, least classroom-taught part of this project.",
-    impact:
-      "Coursework-derived but built past the minimum requirement: a working big-data pipeline that mirrors how analytics infrastructure looks in production.",
-    github: "https://github.com/PratikSharma264",
-    accent: "moss",
-  },
+  // {
+  //   slug: "bigdata-analytics-platform",
+  //   title: "Big Data Analytics Platform",
+  //   tagline: "Hadoop and Spark, end to end on a real dataset",
+  //   description:
+  //     "An analytics pipeline built on the Hadoop ecosystem with Spark for processing, taking raw data from ingestion through transformation to a visualized output layer.",
+  //   category: "data",
+  //   status: "in-progress",
+  //   features: [
+  //     "Hadoop ecosystem setup for distributed storage",
+  //     "Spark processing for transformation at scale",
+  //     "Data visualization layer on top of processed output",
+  //   ],
+  //   tech: ["Hadoop", "Spark", "Hive", "Python"],
+  //   challenges:
+  //     "Tuning Spark jobs against a Hadoop cluster's actual resource limits — rather than just getting a job to finish on a laptop — was the most useful, least classroom-taught part of this project.",
+  //   impact:
+  //     "Coursework-derived but built past the minimum requirement: a working big-data pipeline that mirrors how analytics infrastructure looks in production.",
+  //   github: "https://github.com/PratikSharma264",
+  //   accent: "moss",
+  // },
 ];
 
 export const researchInterests: ResearchInterest[] = [
