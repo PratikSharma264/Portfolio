@@ -38,7 +38,7 @@ export function Projects() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading
             eyebrow="projects"
-            title="Things I've built and shipped."
+            title="Things I've built."
             description="From a research-grade RAG diagnostic system to a full-stack marketplace — each one chosen because it forced a different kind of hard problem."
           />
           <div
