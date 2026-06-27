@@ -235,11 +235,25 @@ export const publications: Publication[] = [
 
 export const education: EducationEntry[] = [
   {
+    degree: "Higher Secondary Education",
+    institution: "Global School of Science",
+    location: "Baneshwor,Nepal",
+    start: "2021",
+    end: "2022",
+    coursework: [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Computer Science",
+      "English",
+    ],
+  },
+  {
     degree: "Bachelor in Computer Science",
     institution: "Khwopa Engineering College",
-    location: "Nepal",
-    start: "2020",
-    end: "2024",
+    location: "Bhaktapur, Nepal",
+    start: "2023",
+    end: "2027",
     coursework: [
       "Machine Learning",
       "Artificial Intelligence",
