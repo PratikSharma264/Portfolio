@@ -69,12 +69,12 @@ export const skillCategories: SkillCategory[] = [
     title: "Web Development",
     blurb: "Shipping the product layer",
     skills: [
-      { name: "Next.js", level: 85 },
-      { name: "React", level: 86 },
-      { name: "Django", level: 78 },
-      { name: "Tailwind CSS", level: 88 },
-      { name: "HTML", level: 90 },
-      { name: "CSS", level: 86 },
+      { name: "Next.js", level: 20 },
+      { name: "React", level: 20 },
+      { name: "Django", level: 80 },
+      { name: "Tailwind CSS", level: 50 },
+      { name: "HTML", level: 60 },
+      { name: "CSS", level: 60 },
     ],
   },
   {
@@ -98,7 +98,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "PostgreSQL", level: 82 },
       { name: "MySQL", level: 80 },
       { name: "MongoDB", level: 75 },
-      { name: "Cassandra", level: 60 },
+      { name: "Cassandra", level: 50 },
     ],
   },
   {
@@ -236,10 +236,10 @@ export const publications: Publication[] = [
 export const education: EducationEntry[] = [
   {
     degree: "B.Sc. in Computer Science",
-    institution: "[Your University / College Name]",
+    institution: "Khwopa Engineering College",
     location: "Nepal",
-    start: "[Start Year]",
-    end: "[Expected Graduation Year]",
+    start: "2020",
+    end: "2024",
     coursework: [
       "Data Mining",
       "Machine Learning",
@@ -252,64 +252,64 @@ export const education: EducationEntry[] = [
   },
 ];
 
-export const certifications: Certification[] = [
-  {
-    name: "[Certification Name]",
-    issuer: "[Issuing Platform]",
-    date: "[Add date]",
-    link: "#",
-  },
-  {
-    name: "[Certification Name]",
-    issuer: "[Issuing Platform]",
-    date: "[Add date]",
-    link: "#",
-  },
-];
+// export const certifications: Certification[] = [
+//   {
+//     name: "[Certification Name]",
+//     issuer: "[Issuing Platform]",
+//     date: "[Add date]",
+//     link: "#",
+//   },
+//   {
+//     name: "[Certification Name]",
+//     issuer: "[Issuing Platform]",
+//     date: "[Add date]",
+//     link: "#",
+//   },
+// ];
 
-export const achievements: Achievement[] = [
-  {
-    title: "[Achievement / competition placement]",
-    org: "[Organizer]",
-    date: "[Add date]",
-    description: "[One line on what it was and what you did.]",
-  },
-  {
-    title: "[Hackathon name]",
-    org: "[Organizer]",
-    date: "[Add date]",
-    description: "[What you built, in one line.]",
-  },
-];
+// export const achievements: Achievement[] = [
+//   {
+//     title: "[Achievement / competition placement]",
+//     org: "[Organizer]",
+//     date: "[Add date]",
+//     description: "[One line on what it was and what you did.]",
+//   },
+//   {
+//     title: "[Hackathon name]",
+//     org: "[Organizer]",
+//     date: "[Add date]",
+//     description: "[What you built, in one line.]",
+//   },
+// ];
 
-export const experience: ExperienceEntry[] = [
-  {
-    role: "[Role title]",
-    org: "[Company / lab name]",
-    type: "internship",
-    start: "[Start]",
-    end: "[End / Present]",
-    location: "[Remote / City]",
-    points: [
-      "[What you owned — one concrete line]",
-      "[A measurable outcome, if you have one]",
-    ],
-  },
-];
+// export const experience: ExperienceEntry[] = [
+//   {
+//     role: "[Role title]",
+//     org: "[Company / lab name]",
+//     type: "internship",
+//     start: "[Start]",
+//     end: "[End / Present]",
+//     location: "[Remote / City]",
+//     points: [
+//       "[What you owned — one concrete line]",
+//       "[A measurable outcome, if you have one]",
+//     ],
+//   },
+// ];
 
-export const testimonials: Testimonial[] = [
-  {
-    name: "[Name]",
-    role: "[Their role, relationship to you]",
-    quote:
-      "[A short quote about working with you. Replace with a real one from a professor, mentor, or collaborator — or remove this section.]",
-  },
-  {
-    name: "[Name]",
-    role: "[Their role, relationship to you]",
-    quote: "[Another short, real quote goes here.]",
-  },
-];
+// export const testimonials: Testimonial[] = [
+//   {
+//     name: "[Name]",
+//     role: "[Their role, relationship to you]",
+//     quote:
+//       "[A short quote about working with you. Replace with a real one from a professor, mentor, or collaborator — or remove this section.]",
+//   },
+//   {
+//     name: "[Name]",
+//     role: "[Their role, relationship to you]",
+//     quote: "[Another short, real quote goes here.]",
+//   },
+// ];
 
 export const blogPosts: BlogPost[] = [
   {
