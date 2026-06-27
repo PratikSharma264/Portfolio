@@ -43,7 +43,7 @@ export function Research() {
           ))}
         </div>
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <p className="eyebrow">publications &amp; ongoing work</p>
           <div className="mt-4 divide-y divide-border rounded-xl border border-border bg-surface">
             {publications.map((pub) => (
@@ -61,7 +61,7 @@ export function Research() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

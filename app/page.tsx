@@ -21,12 +21,12 @@ export default function HomePage() {
       <Skills />
       <Projects />
       <Research />
+      
       <Education />
-
       {/* <CredentialsAndAchievements />
       <Experience />
       <Testimonials /> */}
-      
+
       <GithubActivity />
       <BlogPreview />
       <Contact />
