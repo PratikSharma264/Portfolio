@@ -13,7 +13,6 @@ const filters: { id: "all" | Project["category"]; label: string }[] = [
   { id: "all", label: "All" },
   { id: "ai", label: "AI / ML" },
   { id: "web", label: "Web" },
-  { id: "data", label: "Data" },
 ];
 
 const statusLabel: Record<Project["status"], string> = {
