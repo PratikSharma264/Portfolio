@@ -253,7 +253,7 @@ export const education: EducationEntry[] = [
     institution: "Khwopa Engineering College",
     location: "Bhaktapur, Nepal",
     start: "2023",
-    end: "2027",
+    end: "...",
     coursework: [
       "Machine Learning",
       "Artificial Intelligence",
