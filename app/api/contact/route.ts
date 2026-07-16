@@ -1,3 +1,4 @@
+import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/schemas";
 
@@ -14,27 +15,54 @@ export async function POST(request: Request) {
 
   const { name, email, subject, message } = parsed.data;
 
-  // TODO: wire this up to a real email provider before deploying.
-  // The shape below works with Resend (https://resend.com) — install the
-  // `resend` package, set RESEND_API_KEY in your environment, and uncomment:
-  //
-  // const resend = new Resend(process.env.RESEND_API_KEY);
-  // await resend.emails.send({
-  //   from: "Portfolio <noreply@yourdomain.com>",
-  //   to: "sharmapratikabcd@gmail.com",
-  //   subject: `[Portfolio] ${subject}`,
-  //   replyTo: email,
-  //   text: `From: ${name} <${email}>\n\n${message}`,
-  // });
+  const host = process.env.SMTP_HOST;
+  const port = Number(process.env.SMTP_PORT || 587);
+  const secure = process.env.SMTP_SECURE === "true" || port === 465;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
+  const from = process.env.SMTP_FROM || user || "Portfolio <sharmapratikabcd@gmail.com>";
+  const to = process.env.CONTACT_TO || user || "sharmapratikabcd@gmail.com";
 
-  if (!process.env.RESEND_API_KEY) {
-    console.log("[contact] No email provider configured. Message received:", {
+  if (!host || !user || !pass) {
+    console.log("[contact] SMTP not configured. Message received:", {
       name,
       email,
       subject,
       message,
     });
+
+    return NextResponse.json(
+      { ok: false, error: "Email service is not configured yet." },
+      { status: 503 },
+    );
   }
 
-  return NextResponse.json({ ok: true });
+  try {
+    const transporter = nodemailer.createTransport({
+      host,
+      port,
+      secure,
+      auth: {
+        user,
+        pass,
+      },
+    });
+
+    await transporter.sendMail({
+      from,
+      to,
+      replyTo: email,
+      subject: `[Portfolio] ${subject}`,
+      text: `Name: ${name}\nEmail: ${email}\n\n${message}`,
+      html: `<p><strong>Name:</strong> ${name}<br /><strong>Email:</strong> ${email}</p><p>${message.replace(/\n/g, "<br />")}</p>`,
+    });
+
+    return NextResponse.json({ ok: true });
+  } catch (error) {
+    console.error("[contact] Failed to send email", error);
+    return NextResponse.json(
+      { ok: false, error: "Failed to send email." },
+      { status: 500 },
+    );
+  }
 }
