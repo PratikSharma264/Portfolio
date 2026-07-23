@@ -30,7 +30,7 @@ export const profile = {
   githubUsername: "PratikSharma264",
   domain: "portfolio-five-rho-kjc7ra8zsi.vercel.app",
   siteUrl: "https://portfolio-five-rho-kjc7ra8zsi.vercel.app",
-  resumeUrl: "\Portfolio\public\resume.pdf", //  real PDF in /public/resume.pdf
+  resumeUrl: "/resume.pdf", // real PDF in /public/resume.pdf
   availability: "Open to internships & research collaborations",
   summary:
     "I build retrieval-augmented and applied-ML systems, then ship them as real, usable software. Most of my time goes into the gap between a model that works in a notebook and a system that holds up in production — evaluation, failure analysis, and the backend plumbing around it.",
