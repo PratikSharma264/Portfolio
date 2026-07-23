@@ -14,7 +14,7 @@ import type {
 export const profile = {
   name: "Pratik Sharma",
   initials: "PS",
-  title: "Computer Science Student",
+  title: "Computer Engineering Student",
   roles: [
     "AI Engineer",
     "Backend Developer",
@@ -30,12 +30,12 @@ export const profile = {
   githubUsername: "PratikSharma264",
   domain: "portfolio-five-rho-kjc7ra8zsi.vercel.app",
   siteUrl: "https://portfolio-five-rho-kjc7ra8zsi.vercel.app",
-  resumeUrl: "#", // TODO: replace with a real PDF in /public/resume.pdf
+  resumeUrl: "/public/resume.pdf", //  real PDF in /public/resume.pdf
   availability: "Open to internships & research collaborations",
   summary:
     "I build retrieval-augmented and applied-ML systems, then ship them as real, usable software. Most of my time goes into the gap between a model that works in a notebook and a system that holds up in production — evaluation, failure analysis, and the backend plumbing around it.",
   bio: [
-    "I'm a Computer Science undergraduate based in Nepal, focused on the applied side of AI: retrieval-augmented generation, NLP, and the infrastructure that makes machine learning systems trustworthy enough to actually deploy.",
+    "I'm a Computer Engineering undergraduate based in Nepal, focused on the applied side of AI: retrieval-augmented generation, NLP, and the infrastructure that makes machine learning systems trustworthy enough to actually deploy.",
     "My coursework and side projects sit at the intersection of three things — large language models, the data engineering that feeds them, and the backend work needed to put them in front of real users. I'm equally comfortable profiling a Spark job and shipping a Next.js front end for it.",
     "Right now I'm most interested in why RAG pipelines fail silently — retrieval misses, stale context, hallucinated citations — and how to detect those failures before a user sees them, particularly in medical and other high-stakes domains.",
   ],
@@ -249,7 +249,7 @@ export const education: EducationEntry[] = [
     ],
   },
   {
-    degree: "Bachelor in Computer Science",
+    degree: "Bachelor in Computer Engineering",
     institution: "Khwopa Engineering College",
     location: "Bhaktapur, Nepal",
     start: "2023",
