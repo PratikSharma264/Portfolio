@@ -333,9 +333,11 @@ export const blogPosts: BlogPost[] = [
     tags: ["RAG", "AI", "Evaluation"],
     date: "2026-02-14",
     content: [
-      "A retrieval-augmented generation pipeline has two places to fail: the retriever can return the wrong context, or the generator can ignore good context and answer badly anyway. Scoring only the final output collapses these into one number, which makes debugging close to impossible.",
-      "Splitting evaluation into a retrieval-quality check and a generation-faithfulness check — even a rough one — makes failure analysis tractable. You start to see whether your error budget is a retriever problem or a prompting problem, which are fixed in completely different ways.",
-      "This is the core idea behind the clinical RAG failure classifier in my projects section: a small model whose only job is to label *why* an answer might be wrong, sitting alongside the main pipeline rather than inside it.",
+      "Retrieval-Augmented Generation (RAG) systems can fail silently because errors may occur long before the final answer is produced. A document retrieval step might return irrelevant or incomplete information, while the language model may confidently generate an answer that appears correct despite lacking sufficient evidence. Looking only at the final response hides the true source of the failure.",
+  
+      "Evaluating retrieval and generation as separate stages provides much deeper insight into system performance. Retrieval metrics such as similarity scores, relevance, and context coverage reveal whether the knowledge base supplied the right information, while generation metrics such as faithfulness and hallucination detection indicate whether the LLM remained grounded in the retrieved evidence. Separating these evaluations makes debugging faster and far more reliable.",
+  
+      "This principle forms the basis of retrieval failure classification in my Clinical RAG project. After FAISS retrieves the top-ranked medical passages using PubMedBERT embeddings, a dedicated failure classifier analyzes retrieval confidence before the context reaches the language model. Instead of simply marking an answer as correct or incorrect, the system identifies issues such as low-relevance retrieval, missing evidence, partial retrieval, or possible hallucination, making the entire RAG pipeline more transparent and trustworthy for clinical question answering."
     ],
   },
 
