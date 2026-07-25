@@ -29,7 +29,7 @@ export const profile = {
   github: "https://github.com/PratikSharma264",
   githubUsername: "PratikSharma264",
   domain: "portfolio-five-rho-kjc7ra8zsi.vercel.app",
-  siteUrl: "https://portfolio-five-rho-kjc7ra8zsi.vercel.app",
+  siteUrl: "https://www.pratiksharma2060.com.np/",
   resumeUrl: "/resume.pdf", // real PDF in /public/resume.pdf
   availability: "Open to internships & research collaborations",
   summary:
