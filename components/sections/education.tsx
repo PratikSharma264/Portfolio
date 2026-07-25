@@ -26,6 +26,9 @@ export function Education() {
                       <p className="text-sm text-text-lo">
                         {entry.institution} · {entry.location}
                       </p>
+                      {entry.gpa ? (
+                        <p className="text-sm text-text-lo">GPA: {entry.gpa}</p>
+                      ) : null}
                     </div>
                   </div>
                   <p className="font-mono text-xs text-text-lo">

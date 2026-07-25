@@ -47,6 +47,7 @@ export type EducationEntry = {
   start: string;
   end: string;
   coursework: string[];
+  gpa?: string | null;
   note?: string;
 };
 
